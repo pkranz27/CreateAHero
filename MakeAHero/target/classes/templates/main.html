@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+<th:block th:replace="/fragments/header"></th:block>
+</head>
+
+<body>
+	<div th:replace="/fragments/navbar" ></div>
+	<div th:replace="/fragments/mainherotabs" ></div>
+	<div class="container">
+		<div class="card shadow p-3 mb-5 bg-body rounded" style="width: 22rem;" th:each="hero:${heroList}">
+			<img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/c/cf/Drizzt.png" alt="HERO RACE POTRAIT" width=400px height=300px>
+			
+			<div class="card-body">
+				<h3 class="card-title fw-bold">Your Hero</h3>
+				<p class="card-text fst-italic">First Name: <span th:text="${hero.firstname}"></span></p>
+				<p class="card-text fst-italic">Last Name: <span th:text="${hero.lastName}"></span></p>
+				<p class="card-text fst-italic">Race: <span th:text="${hero.race.name}"></span></p>
+				<p class="card-text fst-italic">Age: <span th:text="${hero.age}"></span></p>
+				<p class="card-text fst-italic">About me: <span th:text="${hero.biography}"></span></p>
+			</div>
+			
+			<td><a th:href="@{/delete/{id}(id=${hero.id})}">Delete</a></td>
+		</div>			
+	</div> 
+	<div th:replace="/fragments/footer"></div>
+</body>
+</html>
