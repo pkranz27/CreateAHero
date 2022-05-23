@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+<th:block th:replace="/fragments/header"></th:block>
+</head>
+<body>
+	<div th:replace="/fragments/navbar"></div>
+	<div class="container">
+		<h1><strong>Classes</strong></h1>
+		<div class="media shadow p-3 mb-5 bg-body rounded" id="archer">
+			<div class="media-left media-middle">
+				<a href="#"> <img class="media-object"
+					src="https://koboldpress.com/wp-content/uploads/2018/10/alchemist-archer-elf.jpg"
+					alt="Drow" width="400" height="400">
+				</a>
+			</div>
+			<div class="media-body" id="archer">
+				<h1 class="media-heading"><strong>Archer</strong></h1>
+				<p  class="lead">Archers are masters of ranged combat. 
+				They prefer to take down their enemies from afar and generally avoid close combat. 
+				Although some races, such as elves, certainly favor this class and are well suited to it, 
+				any race can excel at being an archer, given enough training.
+				</p>
+				<div class="collapse.show" id="collapseExample">
+  					<div class="card card-body">
+    					<h5>Class bonuses, intellegence: +2, Might:+2</h5>
+  					</div>
+  				</div>
+
+			</div>
+		</div>
+		<div class="media shadow p-3 mb-5 bg-body rounded" id="mage-container">
+			<div class="media-left media-middle">
+				<a href="#"> <img class="media-object"
+					src="https://www.nicepng.com/png/detail/243-2438847_class-creation-knight-mage-d-d-5e.png"
+					alt="Mage" width="400" height="400">
+				</a>
+			</div>
+			<div class="media-body" id="Mage">
+				<h1 class="media-heading"><strong>Mage</strong></h1>
+				<p  class="lead">Mages spend their lives in the study and practice of magic. 
+				Good-aligned mages offer counsel to nobles and others in power, 
+				while evil mages dwell in isolated sites to perform unspeakable experiments without interference.
+				</p>
+				<div class="collapse.show" id="collapseExample">
+  					<div class="card card-body">
+    					<h5>Class bonuses, intellegence: +3, Might:+1</h5>
+  					</div>
+  				</div>
+			</div>
+		</div>
+		<div class="media shadow p-3 mb-5 bg-body rounded" id="warrior-container">
+			<div class="media-left media-middle">
+				<a href="#"> <img class="media-object"
+					src="https://www.dndbeyond.com/avatars/thumbnails/6/359/420/618/636272697874197438.png"
+					alt="Drow" width="400" height="400">
+				</a>
+			</div>
+			<div class="media-body" id="Warrior">
+				<h1 class="media-heading"><strong>Warrior</strong></h1>
+				<p class="lead"> Fighters learn the basics of all combat styles. Every fighter can swing an axe, fence with a rapier, wield a longsword or a greatsword, use a bow, and even trap foes in a net with some degree of skill.
+				 Likewise, a fighter is adept with shields and every form of armor. 
+				 Beyond that basic degree of familiarity, each fighter specializes in a certain style of combat. 
+				 Some concentrate on archery, some on fighting with two weapons at once, and some on augmenting their martial skills with magic.
+				 This combination of broad general ability and extensive specialization makes fighters superior combatants on battlefields and in dungeons alike.
+				</p>
+				<div class="collapse.show" id="collapseExample">
+  					<div class="card card-body">
+    					<h5>Class bonuses, intellegence: +1, Might:+3</h5>
+  					</div>
+  				</div>
+			</div>
+		</div>
+	</div>
+	<div th:replace="/fragments/footer"></div>
+</body>
+</html>
